@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Doctor List</title>
+  <link rel="shortcut icon" type="x-icon" href="img/site-icon.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="output.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+</head>
+
+<body class="font-sans">
+  <section class=" max-w-[1920px] ml-auto mr-auto">
+
+    <!-- Navigation Menu -->
+    <div class="relative dashboard-menu">
+      <nav
+        class="bg-white fixed top-0 flex flex-row xl:flex-col justify-between xl:h-full custom-container shadow-sm xl:shadow-none w-full xl:w-fit z-10">
+
+        <div class="">
+
+          <a href=""><img class="h-10 xl:h-14 2xl:h-14 mx-0 xl:mx-5 my-2 xl:my-5 xl:ml-5" src="img/logo (2).png"
+              alt=""></a>
+
+          <div
+            class="bg-white xl:bg-transparent hidden xl:grid absolute xl:static top-6 right-0 z-10 rounded-sm py-5 xl:py-0 2xl:py-5 max-h-[800px] xl:max-h-[470px] 2xl:max-h-[750px] overflow-y-auto scroll-h min-w-[195px] scroll-smooth shadow-md xl:shadow-none mt-5 px-5"
+            id="toggle-menu">
+
+            <a class="menu-list" href="">
+              <div class="h-4 w-4 flex items-center justify-center rounded-[50%] overflow-hidden"><img
+                  src="img/Traced Image 1.png" alt=""></div>
+              <span>Overview</span>
+            </a>
+
+            <a class="menu-list mt-2 menu-list-active" href="">
+              <div class="h-4 w-4 flex items-center justify-center rounded-[50%] overflow-hidden"><img
+                  src="img/Traced Image 4.png" alt=""></div>
+              <span>Doctor Appoinment</span>
+            </a>
+
+
+            <a class="menu-list mt-2" href="">
+              <div class="h-4 w-4 flex items-center justify-center rounded-[50%] overflow-hidden"><img
+                  src="img/Traced Image 3.png" alt=""></div>
+              <span>Pregnancy care</span>
+            </a>
+
+            <button class="accordion-button menu-list mt-2">
+              <div class="h-4 w-4 flex items-center justify-center rounded-[50%] overflow-hidden"><img
+                  src="img/Traced Image 4.png" alt=""></div>
+              <span>Doctor List</span>
+              <i class="ml-auto fa-solid fa-chevron-down"></i>
+            </button>
+
+            <ul class="menu-collapse hidden list-none">
+              <li><a href="#">- All</a></li>
+              <li><a href="#">- Actor</a></li>
+              <li><a href="#">- Models</a></li>
+              <li><a href="#">- Athelete</a></li>
+              <li><a href="#">- Chefs</a></li>
+              <li><a href="#">- Creator</a></li>
+              <li><a href="#">- Comedian</a></li>
+              <li><a href="#">- Musicial</a></li>
+              <li><a href="#">- RJ</a></li>
+            </ul>
+
+            <button class="accordion-button menu-list mt-2">
+              <div class="h-4 w-4 flex items-center justify-center rounded-[50%] overflow-hidden"><img
+                  src="img/Traced Image 5.png" alt=""></div>
+              <span>Diagnostic List</span>
+              <i class="ml-auto fa-solid fa-chevron-down"></i>
+            </button>
+
+            <ul class="menu-collapse hidden list-none">
+              <li><a href="#">- All</a></li>
+              <li><a href="#">- Actor</a></li>
+              <li><a href="#">- Models</a></li>
+              <li><a href="#">- Athelete</a></li>
+              <li><a href="#">- Chefs</a></li>
+              <li><a href="#">- Creator</a></li>
+              <li><a href="#">- Comedian</a></li>
+              <li><a href="#">- Musicial</a></li>
+              <li><a href="#">- RJ</a></li>
+            </ul>
+
+            <a class="menu-list mt-2" href="">
+              <div class="h-4 w-4 flex items-center justify-center rounded-[50%] overflow-hidden"><img
+                  src="img/Traced Image 6.png" alt=""></div>
+              <span>Medicine List</span>
+            </a>
+
+            <a class="menu-list mt-2" href="">
+              <div class="h-4 w-4 flex items-center justify-center rounded-[50%] overflow-hidden"><img
+                  src="img/Traced Image 7.png" alt=""></div>
+              <span>Premium Member list</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- HamBurger Section -->
+        <div class="flex justify-center items-center gap-3 pt-3">
+          <button class="block xl:hidden" id="toggle-button">
+            <svg class="-mr-[1px]" height="24px" width="24px" fill="none" stroke="currentColor" stroke-width="1.5"
+              viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5">
+              </path>
+            </svg>
+          </button>
+        </div>
+      </nav>
+    </div>
+
+
+    <!-- Right Side Section -->
+    <div class="ml-auto w-full xl:w-5/6 md:w-3/4 px-1 xl:px-5 py-2 mt-16 xl:mt-0 h-screen">
+
+
+      <!-- Project Overview Header -->
+
+      <section class="flex flex-col xl:flex-row xl:items-center justify-between px-5 py-2 xl:py-5 gap-4">
+
+        <div class="relative">
+          <input class="py-2 pr-3 pl-10 focus:outline-none" type="text" placeholder="Search">
+          <i class="fa-solid fa-magnifying-glass absolute top-1/2 left-3 -translate-y-1/2 text-tColor"></i>
+        </div>
+
+        <!-- Notification & User -->
+
+        <div class="flex items-center gap-5 flex-wrap">
+
+          <div
+            class="text-md xl:text-base flex items-center gap-4 xl:gap-5 ml-auto fixed xl:static top-2 right-6 z-10 scale-75 xl:scale-100">
+
+
+            <a class="p-3" href="#">
+              <!-- <i class="fa-solid fa-bell fa-lg"></i> -->
+              <div class="h-10 w-10 flex items-center justify-center rounded-[50%] overflow-hidden"><img
+                  src="img/Notification.png" alt=""></div>
+            </a>
+
+            <a href="#" class="flex items-center gap-2">
+              <div class="h-10 w-10 flex items-center justify-center rounded-[50%] overflow-hidden"><img
+                  src="img/Img.png" alt=""></div>
+              <p class="font-semibold text-md text-black">Maxbert</p>
+              <i class="fa-solid fa-caret-down"></i>
+            </a>
+
+          </div>
+        </div>
+
+      </section>
+      <div class="bg-gray h-full">
+        <section class="px-5 py-5 flex justify-between items-center flex-wrap xl:flex-nowrap gap-5 ">
+
+          <p class="font-bold text-3xl text-tColor2 min-w-[250px]">Doctor List</p>
+
+          <div class="flex items-end gap-4">
+            <div class="bg-white relative rounded-md w-full xl:w-fit shadow">
+              <input class="py-2 pr-3 pl-10 focus:outline-none" type="text" placeholder="Search">
+              <i class="fa-solid fa-magnifying-glass absolute top-1/2 left-3 -translate-y-1/2 text-tColor"></i>
+            </div>
+            <button class="bg-secondaryColor text-white font-semibold text-sm px-4 py-3 rounded mr-auto">+ Add
+              Doctor</button>
+          </div>
+        </section>
+
+        <section class="mx-5">
+
+          <div class="flex flex-col justify-around">
+
+            <div class="bg-white overflow-x-scroll md:overflow-hidden">
+              <table class="table-auto text-xs md:text-sm profile-table w-[300%] md:w-full shadow">
+                <thead>
+                  <tr>
+                    <th>DoctorName</th>
+                    <th>Location</th>
+                    <th>Degree</th>
+                    <th>Department</th>
+                    <th>DoctorIdNumber</th>
+                    <th>DoctorPhoneNumber</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+
+                  <tr>
+                    <td>
+                      <div class="flex items-center gap-2">
+                        <img src="img/Ellipse 2.png" alt="" class="h-7 w-7 rounded-[50%]">
+                        <p class="font-semibold">Jacob Jones</p>
+                      </div>
+                    </td>
+                    <td class="text-tColor2">Kazla, Rajshahi</td>
+                    <td class="text-tColor2">FCPS</td>
+                    <td class="text-tColor2">Psychology</td>
+                    <td class="text-tColor2">68908995</td>
+                    <td class="text-tColor2">(229)555-0109</td>
+                    <td class="text-tColor2">
+                      <div class="flex border  px-2 py-1">
+                        <button class="border-right pr-2"><i class="fa-solid fa-pencil"></i></button>
+                        <button class="pl-2 text-red-500"><i class="fa-regular fa-trash-can"></i></button>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>
+                      <div class="flex items-center gap-2">
+                        <img src="img/Ellipse 3.png" alt="" class="h-7 w-7 rounded-[50%]">
+                        <p class="font-semibold">Arlene McCoy</p>
+                      </div>
+                    </td>
+                    <td class="text-tColor2">Kazla, Rajshahi</td>
+                    <td class="text-tColor2">MBBS</td>
+                    <td class="text-tColor2">Medicine</td>
+                    <td class="text-tColor2">68463643</td>
+                    <td class="text-tColor2">(505) 555-0125</td>
+                    <td class="text-tColor2">
+                      <div class="flex border  px-2 py-1">
+                        <button class="border-right pr-2"><i class="fa-solid fa-pencil"></i></button>
+                        <button class="pl-2 text-red-500"><i class="fa-regular fa-trash-can"></i></button>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>
+                      <div class="flex items-center gap-2">
+                        <img src="img/Ellipse 4.png" alt="" class="h-7 w-7 rounded-[50%]">
+                        <p class="font-semibold">Jenny Wilson</p>
+                      </div>
+                    </td>
+                    <td class="text-tColor2">Kazla, Rajshahi</td>
+                    <td class="text-tColor2">FRCS</td>
+                    <td class="text-tColor2">Medicine</td>
+                    <td class="text-tColor2">76879024</td>
+                    <td class="text-tColor2">(316) 555-0116</td>
+                    <td class="text-tColor2">
+                      <div class="flex border  px-2 py-1">
+                        <button class="border-right pr-2"><i class="fa-solid fa-pencil"></i></button>
+                        <button class="pl-2 text-red-500"><i class="fa-regular fa-trash-can"></i></button>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>
+                      <div class="flex items-center gap-2">
+                        <img src="img/Ellipse 5.png" alt="" class="h-7 w-7 rounded-[50%]">
+                        <p class="font-semibold">Marvin McKinney</p>
+                      </div>
+                    </td>
+                    <td class="text-tColor2">Kazla, Rajshahi</td>
+                    <td class="text-tColor2">MBBS</td>
+                    <td class="text-tColor2">Gynocology</td>
+                    <td class="text-tColor2">65757858</td>
+                    <td class="text-tColor2">(303) 555-0105</td>
+                    <td class="text-tColor2">
+                      <div class="flex border  px-2 py-1">
+                        <button class="border-right pr-2"><i class="fa-solid fa-pencil"></i></button>
+                        <button class="pl-2 text-red-500"><i class="fa-regular fa-trash-can"></i></button>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>
+                      <div class="flex items-center gap-2">
+                        <img src="img/Ellipse 6.png" alt="" class="h-7 w-7 rounded-[50%]">
+                        <p class="font-semibold">Wade Warren</p>
+                      </div>
+                    </td>
+                    <td class="text-tColor2">Kazla, Rajshahi</td>
+                    <td class="text-tColor2">FRCS</td>
+                    <td class="text-tColor2">Gastrology</td>
+                    <td class="text-tColor2">974577865</td>
+                    <td class="text-tColor2">(270) 555-0117</td>
+                    <td class="text-tColor2">
+                      <div class="flex border  px-2 py-1">
+                        <button class="border-right pr-2"><i class="fa-solid fa-pencil"></i></button>
+                        <button class="pl-2 text-red-500"><i class="fa-regular fa-trash-can"></i></button>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>
+                      <div class="flex items-center gap-2">
+                        <img src="img/Ellipse 7.png" alt="" class="h-7 w-7 rounded-[50%]">
+                        <p class="font-semibold">Annette Black</p>
+                      </div>
+                    </td>
+                    <td class="text-tColor2">Kazla, Rajshahi</td>
+                    <td class="text-tColor2">FCPS</td>
+                    <td class="text-tColor2">Medicine</td>
+                    <td class="text-tColor2">895747890</td>
+                    <td class="text-tColor2">(209) 555-0104</td>
+                    <td class="text-tColor2">
+                      <div class="flex border  px-2 py-1">
+                        <button class="border-right pr-2"><i class="fa-solid fa-pencil"></i></button>
+                        <button class="pl-2 text-red-500"><i class="fa-regular fa-trash-can"></i></button>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>
+                      <div class="flex items-center gap-2">
+                        <img src="img/Ellipse 8.png" alt="" class="h-7 w-7 rounded-[50%]">
+                        <p class="font-semibold">Esther Howard</p>
+                      </div>
+                    </td>
+                    <td class="text-tColor2">Kazla, Rajshahi</td>
+                    <td class="text-tColor2">FCPS</td>
+                    <td class="text-tColor2">Medicine</td>
+                    <td class="text-tColor2">868674793</td>
+                    <td class="text-tColor2">(217) 555-0113</td>
+                    <td class="text-tColor2">
+                      <div class="flex border  px-2 py-1">
+                        <button class="border-right pr-2"><i class="fa-solid fa-pencil"></i></button>
+                        <button class="pl-2 text-red-500"><i class="fa-regular fa-trash-can"></i></button>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>
+                      <div class="flex items-center gap-2">
+                        <img src="img/Ellipse 9.png" alt="" class="h-7 w-7 rounded-[50%]">
+                        <p class="font-semibold">Robert Fox</p>
+                      </div>
+                    </td>
+                    <td class="text-tColor2">Kazla, Rajshahi</td>
+                    <td class="text-tColor2">MBBS</td>
+                    <td class="text-tColor2">Medicine</td>
+                    <td class="text-tColor2">464575896</td>
+                    <td class="text-tColor2">(405) 555-0128</td>
+                    <td class="text-tColor2">
+                      <div class="flex border  px-2 py-1">
+                        <button class="border-right pr-2"><i class="fa-solid fa-pencil"></i></button>
+                        <button class="pl-2 text-red-500"><i class="fa-regular fa-trash-can"></i></button>
+                      </div>
+                    </td>
+                  </tr>
+
+                </tbody>
+              </table>
+
+            </div>
+
+          </div>
+
+
+        </section>
+
+      </div>
+
+
+
+    </div>
+
+  </section>
+
+
+
+
+
+  <!-- Header Section Script -->
+  <script>
+    // Menu toggle button 
+    const toggleButton = document.getElementById("toggle-button");
+    const toggleMenu = document.getElementById("toggle-menu");
+    var toggleCounter = 1;
+    toggleButton.onclick = function () {
+      toggleCounter++;
+      if (toggleCounter % 2 == 0) {
+        toggleMenu.classList.remove("hidden");
+        toggleMenu.classList.add("grid");
+      }
+      else {
+        toggleMenu.classList.remove("grid");
+        toggleMenu.classList.add("hidden");
+      }
+    }
+
+
+  </script>
+
+
+  <!-- Accordion Script -->
+  <script>
+    const accordionButtons = document.querySelectorAll('.accordion-button');
+    const accordionMenu = document.querySelectorAll('.menu-collapse');
+
+    accordionButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const accordionCollapse = button.nextElementSibling;
+        button.setAttribute('aria-expanded', button.getAttribute('aria-expanded') === 'false' ? 'true' : 'false');
+        accordionCollapse.classList.toggle('hidden');
+      });
+    });
+
+    // Set all accordion items to collapsed state by default
+    document.querySelectorAll('.menu-collapse').forEach(collapse => {
+      collapse.classList.add('hidden');
+    });
+
+
+  </script>
+
+
+  <!-- Table Script -->
+  <script>
+    const tableButtons = document.querySelectorAll('.table-button');
+    const tableMenu = document.querySelectorAll('.table-collapse');
+    const tableClose = document.querySelectorAll('.table-close');
+
+    tableButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const tableCollapse = button.nextElementSibling;
+        button.setAttribute('aria-expanded', button.getAttribute('aria-expanded') === 'false' ? 'true' : 'false');
+        tableCollapse.classList.toggle('hidden');
+      });
+    });
+
+    tableClose.forEach(button => {
+      button.addEventListener('click', () => {
+        const tableCollapse = button.parentElement.parentElement.parentElement;
+        button.setAttribute('aria-expanded', button.getAttribute('aria-expanded') === 'false' ? 'true' : 'false');
+        tableCollapse.classList.toggle('hidden');
+      });
+    });
+
+  </script>
+
+  <script>
+    const tables = document.querySelectorAll('.table-collapse');
+    window.onclick = function (event) {
+      for (let table of tables) {
+        if (event.target == table) {
+          table.classList.toggle('hidden');
+        }
+      }
+    };
+  </script>
+
+
+
+</body>
+
+</html>
