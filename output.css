@@ -1296,7 +1296,7 @@ h6 {
 } */
 .bg-gray {
   --tw-bg-opacity: 1;
-  background-color: #EBEBEB;
+  background-color: #F8F8F8;
 }
 
 .bg-orange-50 {
@@ -1822,7 +1822,7 @@ h6 {
     width: 83.333333%;
   }
   .xl\:w-4\/6 {
-    width: 79.666%;
+    width: 80.066%;
   }
 
   .xl\:w-fit {
