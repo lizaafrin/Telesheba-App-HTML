@@ -159,14 +159,135 @@
           <p class="font-bold text-3xl text-tColor2 min-w-[250px]">Doctor List</p>
 
           <div class="flex items-end gap-4">
-            <div class="bg-white relative rounded-md w-full xl:w-fit shadow">
-              <input class="py-2 pr-3 pl-10 focus:outline-none" type="text" placeholder="Search">
-              <i class="fa-solid fa-magnifying-glass absolute top-1/2 left-3 -translate-y-1/2 text-tColor"></i>
-            </div>
-            <button class="bg-secondaryColor text-white font-semibold text-sm px-4 py-3 rounded mr-auto">+ Add
-              Doctor</button>
+              <div class="bg-white relative rounded-md w-full xl:w-fit shadow">
+                  <input class="py-2 pr-3 pl-10 focus:outline-none" type="text" placeholder="Search Doctor..">
+                  <i
+                      class="fa-solid fa-magnifying-glass absolute top-1/2 left-3 -translate-y-1/2 text-tColor"></i>
+              </div>
+              <button class="btn bg-secondaryColor text-white font-semibold text-sm px-4 py-3 rounded mr-auto"
+                  onclick="my_modal_5.showModal()">+ Add Doctor
+              </button>
+
+              <!------------- Modal part-------------- -->
+              <dialog id="my_modal_5" className="modal modal-bottom sm:modal-middle">
+                  <form class="modal-box w-90 ">
+                      <div class="flex gap-3 items-center justify-start pb-3">
+                          <div class="h-4 w-4 flex  rounded-[50%] overflow-hidden">
+                              <img src="img/Traced Image.png" alt="">
+                          </div>
+                          <span class="modal-text">Add Doctor</span>
+                      </div>
+                      <button
+                          class="btn-cross btn btn-sm btn-circle absolute right-2 top-2 bg-gray-200">✕</button>
+                      <div class="my-3">
+                          <label class="block text-gray-700 text-sm mb-2" for="Doctor Name">Doctor
+                              Name:</label>
+                          <input
+                              class="rounded-md  shadow py-2 px-3 w-full focus:outline-none bg-gray-100 text-sm"
+                              type="text" placeholder="Doctor Name">
+                      </div>
+                      <div class="my-3">
+                          <label class="block text-gray-700 text-sm mb-2" for="Doctor Name">Doctor
+                              Degree:</label>
+                          <input
+                              class="rounded-md  shadow py-2 px-3 w-full focus:outline-none bg-gray-100 text-sm"
+                              id="Doctor Degree" type="text" placeholder="Write Doctor Degree">
+                      </div>
+                      <div class="my-3">
+                          <label class="block text-gray-700 text-sm mb-2" for="Doctor Name">Doctor
+                              Location :</label>
+                          <div class="relative">
+                              <select
+                                  class="block appearance-none w-full text-tColor py-3 px-4 pr-8 rounded leading-tight focus:outline-none shadow font-sm bg-gray-100">
+                                  <option class="text-black">Select Location</option>
+                                  <option class="text-black">Dhaka</option>
+                                  <option class="text-black">Rajshahi</option>
+                                  <option class="text-black">Rangpur</option>
+                                  <option class="text-black">Chittagong</option>
+                              </select>
+                              <div
+                                  class="pointer-events-none absolute inset-y-0 right-1 flex items-center px-2 text-white -mt-2">
+                                  <i class="fa-solid fa-sort-down text-tColor"></i>
+                              </div>
+                          </div>
+
+                      </div>
+                      <div class="my-3">
+                          <label class="block text-gray-700 text-sm mb-2" for="Doctor Name">Doctor
+                              Department:</label>
+                          <div class="relative">
+                              <select
+                                  class="block appearance-none w-full text-tColor py-3 px-4 pr-8 rounded leading-tight focus:outline-none shadow font-sm bg-gray-100">
+                                  <option class="text-black">Choose Department</option>
+                                  <option class="text-black">Medicine</option>
+                                  <option class="text-black">Gyneacology</option>
+                                  <option class="text-black">Surgeon</option>
+                                  <option class="text-black">Neurology</option>
+                              </select>
+                              <div
+                                  class="pointer-events-none absolute inset-y-0 right-1 flex items-center px-2 text-white -mt-2">
+                                  <i class="fa-solid fa-sort-down text-tColor"></i>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="my-3">
+                          <label class="block text-gray-700 text-sm mb-2" for="Doctor Name">Doctor
+                              Starting time:</label>
+                          <div class="relative">
+                              <select
+                                  class="block appearance-none w-full text-tColor py-3 px-4 pr-8 rounded leading-tight focus:outline-none shadow font-sm bg-gray-100">
+                                  <option class="text-black">Choose Starting Time</option>
+                                  <option class="text-black">10.00 AM</option>
+                                  <option class="text-black">11.00 AM</option>
+                                  <option class="text-black">4.00 PM</option>
+                                  <option class="text-black">2.00 PM</option>
+                              </select>
+                              <div
+                                  class="pointer-events-none absolute inset-y-0 right-1 flex items-center px-2 text-white -mt-2">
+                                  <i class="fa-solid fa-sort-down text-tColor"></i>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="my-3 mt-">
+                          <label class="block text-gray-700 text-sm mb-2" for="Doctor Name">Doctor
+                              Ending time:</label>
+                          <div class="relative">
+                              <select
+                                  class="block appearance-none w-full text-tColor py-3 px-4 pr-8 rounded leading-tight focus:outline-none shadow font-sm bg-gray-100">
+                                  <option class="text-black">Choose ending Time</option>
+                                  <option class="text-black">10.00 AM</option>
+                                  <option class="text-black">11.00 AM</option>
+                                  <option class="text-black">4.00 PM</option>
+                                  <option class="text-black">2.00 PM</option>
+                              </select>
+                              <div
+                                  class="pointer-events-none absolute inset-y-0 right-1 flex items-center px-2 text-white -mt-2">
+                                  <i class="fa-solid fa-sort-down text-tColor"></i>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="my-3">
+                          <label class="block text-gray-700 text-sm mb-2" for="Doctor Name">Doctor
+                              Phone Number:</label>
+                          <input
+                              class="rounded-md  shadow py-2 px-3 w-full focus:outline-none bg-gray-100 text-sm"
+                              id="Phone Number" type="text" placeholder="Doctor Phone Number">
+                      </div>
+                      <div class="my-3">
+                          <label class="block text-gray-700 text-sm mb-2" for="Doctor Name">Doctor
+                              ID:</label>
+                          <input
+                              class="rounded-md  shadow py-2 px-3 w-full focus:outline-none bg-gray-100 text-sm"
+                              id="Doctor ID" type="text" placeholder="Write Doctor ID">
+                      </div>
+                      <button
+                          class="btn bg-secondaryColor text-white font-semibold text-sm px-4 py-3 rounded mr-auto w-full my-5"
+                          type="submit">Add Doctor</button>
+                  </form>
+              </dialog>
+
           </div>
-        </section>
+      </section>
 
         <section class="mx-5">
 

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hospital List</title>
+    <title>Foreign Doctor List</title>
     <link rel="shortcut icon" type="x-icon" href="img/site-icon.png">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="output.css">
@@ -49,8 +49,9 @@
                         </a>
 
                         <button class="accordion-button menu-list mt-2">
-                            <div class="h-4 w-4 flex items-center justify-center rounded-[50%] overflow-hidden"><img
-                                    src="img/Traced Image 4.png" alt=""></div>
+                            <div class="h-4 w-4 flex items-center justify-center rounded-[50%] overflow-hidden">
+                                <img src="img/Traced Image 4.png" alt="">
+                            </div>
                             <span>Doctor List</span>
                             <i class="ml-auto fa-solid fa-chevron-down"></i>
                         </button>
@@ -138,6 +139,7 @@
 
 
                         <a class="p-3" href="#">
+                            <!-- <i class="fa-solid fa-bell fa-lg"></i> -->
                             <div class="h-10 w-10 flex items-center justify-center rounded-[50%] overflow-hidden"><img
                                     src="img/Notification.png" alt=""></div>
                         </a>
@@ -156,61 +158,136 @@
             <div class="bg-gray h-full">
                 <section class="px-5 py-5 flex justify-between items-center flex-wrap xl:flex-nowrap gap-5 ">
 
-                    <p class="font-bold text-3xl text-tColor2 min-w-[250px]">Hospital List</p>
+                    <p class="font-bold text-3xl text-tColor2 min-w-[250px]">Foreign Doctor List</p>
 
                     <div class="flex items-end gap-4">
                         <div class="bg-white relative rounded-md w-full xl:w-fit shadow">
-                            <input class="py-2 pr-3 pl-10 focus:outline-none" type="text" placeholder="Search Hospital">
+                            <input class="py-2 pr-3 pl-10 focus:outline-none" type="text" placeholder="Search Doctor..">
                             <i
                                 class="fa-solid fa-magnifying-glass absolute top-1/2 left-3 -translate-y-1/2 text-tColor"></i>
                         </div>
                         <button class="btn bg-secondaryColor text-white font-semibold text-sm px-4 py-3 rounded mr-auto"
-                        onclick="my_modal_5.showModal()">+ Add Hospital
-                      </button>
-          
-                      <!------------- Modal part-------------- -->
-                      <dialog id="my_modal_5" className="modal modal-bottom sm:modal-middle">
-                        <form class="modal-box w-90 ">
-                          <div class="flex gap-3 items-center justify-start pb-3">
-                            <div class="h-4 w-4 flex  rounded-[50%] overflow-hidden">
-                              <img src="img/Vector (3).png" alt="">
-                            </div>
-                            <span class="modal-text">Add Hospital</span>
-                          </div>
-                          <button class="btn-cross btn btn-sm btn-circle absolute right-2 top-2 bg-gray-200">✕</button>
-          
-                          <div class="my-3">
-                            <label class="block text-gray-700 text-sm mb-2" for="Hospital Name">Hospital
-                              Name:</label>
-                            <input class="rounded-md  shadow py-2 px-3 w-full focus:outline-none bg-gray-100 text-sm" type="text"
-                              placeholder="Hospital Name">
-                          </div>
-          
-                          <div class="my-3">
-                            <label class="block text-gray-700 text-sm mb-2" for="Hospital Name">Hospital
-                              Location :</label>
-                            <input class="rounded-md  shadow py-2 px-3 w-full focus:outline-none bg-gray-100 text-sm" type="text"
-                              placeholder="Hospital Name">
-                          </div>
-          
-                          <div class="my-3">
-                            <label class="block text-gray-700 text-sm mb-2" for="Phone Number">Hospital
-                              Phone Number:</label>
-                            <input class="rounded-md  shadow py-2 px-3 w-full focus:outline-none bg-gray-100 text-sm"
-                              id="Phone Number" type="text" placeholder="Hospital Phone Number">
-                          </div>
-          
-                          <div class="my-3">
-                            <label class="block text-gray-700 text-sm mb-2" for="Hospital Name">Hospital
-                              ID:</label>
-                            <input class="rounded-md  shadow py-2 px-3 w-full focus:outline-none bg-gray-100 text-sm"
-                              id="Hospital ID" type="text" placeholder="Write Hospital ID">
-                          </div>
-                          <button
-                            class="btn bg-secondaryColor text-white font-semibold text-sm px-4 py-3 rounded mr-auto w-full my-5"
-                            type="submit">Add Hospital</button>
-                        </form>
-                      </dialog>
+                            onclick="my_modal_5.showModal()">+ Add Doctor
+                        </button>
+
+                        <!------------- Modal part-------------- -->
+                        <dialog id="my_modal_5" className="modal modal-bottom sm:modal-middle">
+                            <form class="modal-box w-90 ">
+                                <div class="flex gap-3 items-center justify-start pb-3">
+                                    <div class="h-4 w-4 flex  rounded-[50%] overflow-hidden">
+                                        <img src="img/Traced Image.png" alt="">
+                                    </div>
+                                    <span class="modal-text">Add Foreign Doctor</span>
+                                </div>
+                                <button
+                                    class="btn-cross btn btn-sm btn-circle absolute right-2 top-2 bg-gray-200">✕</button>
+                                <div class="my-3">
+                                    <label class="block text-gray-700 text-sm mb-2" for="Doctor Name">Doctor
+                                        Name:</label>
+                                    <input
+                                        class="rounded-md  shadow py-2 px-3 w-full focus:outline-none bg-gray-100 text-sm"
+                                        type="text" placeholder="Doctor Name">
+                                </div>
+                                <div class="my-3">
+                                    <label class="block text-gray-700 text-sm mb-2" for="Doctor Name">Doctor
+                                        Degree:</label>
+                                    <input
+                                        class="rounded-md  shadow py-2 px-3 w-full focus:outline-none bg-gray-100 text-sm"
+                                        id="Doctor Degree" type="text" placeholder="Write Doctor Degree">
+                                </div>
+                                <div class="my-3">
+                                    <label class="block text-gray-700 text-sm mb-2" for="Doctor Name">Doctor
+                                        Country:</label>
+                                    <div class="relative">
+                                        <select
+                                            class="block appearance-none w-full text-tColor py-3 px-4 pr-8 rounded leading-tight focus:outline-none shadow font-sm bg-gray-100">
+                                            <option class="text-black">Select Country</option>
+                                            <option class="text-black">Uk</option>
+                                            <option class="text-black">India</option>
+                                            <option class="text-black">Bangladesh</option>
+                                            <option class="text-black">Germany</option>
+                                        </select>
+                                        <div
+                                            class="pointer-events-none absolute inset-y-0 right-1 flex items-center px-2 text-white -mt-2">
+                                            <i class="fa-solid fa-sort-down text-tColor"></i>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="my-3">
+                                    <label class="block text-gray-700 text-sm mb-2" for="Doctor Name">Doctor
+                                        Department:</label>
+                                    <div class="relative">
+                                        <select
+                                            class="block appearance-none w-full text-tColor py-3 px-4 pr-8 rounded leading-tight focus:outline-none shadow font-sm bg-gray-100">
+                                            <option class="text-black">Choose Department</option>
+                                            <option class="text-black">Medicine</option>
+                                            <option class="text-black">Gyneacology</option>
+                                            <option class="text-black">Surgeon</option>
+                                            <option class="text-black">Neurology</option>
+                                        </select>
+                                        <div
+                                            class="pointer-events-none absolute inset-y-0 right-1 flex items-center px-2 text-white -mt-2">
+                                            <i class="fa-solid fa-sort-down text-tColor"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="my-3">
+                                    <label class="block text-gray-700 text-sm mb-2" for="Doctor Name">Doctor
+                                        Starting time:</label>
+                                    <div class="relative">
+                                        <select
+                                            class="block appearance-none w-full text-tColor py-3 px-4 pr-8 rounded leading-tight focus:outline-none shadow font-sm bg-gray-100">
+                                            <option class="text-black">Choose Starting Time</option>
+                                            <option class="text-black">10.00 AM</option>
+                                            <option class="text-black">11.00 AM</option>
+                                            <option class="text-black">4.00 PM</option>
+                                            <option class="text-black">2.00 PM</option>
+                                        </select>
+                                        <div
+                                            class="pointer-events-none absolute inset-y-0 right-1 flex items-center px-2 text-white -mt-2">
+                                            <i class="fa-solid fa-sort-down text-tColor"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="my-3 mt-">
+                                    <label class="block text-gray-700 text-sm mb-2" for="Doctor Name">Doctor
+                                        Ending time:</label>
+                                    <div class="relative">
+                                        <select
+                                            class="block appearance-none w-full text-tColor py-3 px-4 pr-8 rounded leading-tight focus:outline-none shadow font-sm bg-gray-100">
+                                            <option class="text-black">Choose ending Time</option>
+                                            <option class="text-black">10.00 AM</option>
+                                            <option class="text-black">11.00 AM</option>
+                                            <option class="text-black">4.00 PM</option>
+                                            <option class="text-black">2.00 PM</option>
+                                        </select>
+                                        <div
+                                            class="pointer-events-none absolute inset-y-0 right-1 flex items-center px-2 text-white -mt-2">
+                                            <i class="fa-solid fa-sort-down text-tColor"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="my-3">
+                                    <label class="block text-gray-700 text-sm mb-2" for="Doctor Name">Doctor
+                                        Phone Number:</label>
+                                    <input
+                                        class="rounded-md  shadow py-2 px-3 w-full focus:outline-none bg-gray-100 text-sm"
+                                        id="Phone Number" type="text" placeholder="Doctor Phone Number">
+                                </div>
+                                <div class="my-3">
+                                    <label class="block text-gray-700 text-sm mb-2" for="Doctor Name">Doctor
+                                        ID:</label>
+                                    <input
+                                        class="rounded-md  shadow py-2 px-3 w-full focus:outline-none bg-gray-100 text-sm"
+                                        id="Doctor ID" type="text" placeholder="Write Doctor ID">
+                                </div>
+                                <button
+                                    class="btn bg-secondaryColor text-white font-semibold text-sm px-4 py-3 rounded mr-auto w-full my-5"
+                                    type="submit">Add Doctor</button>
+                            </form>
+                        </dialog>
+
                     </div>
                 </section>
 
@@ -222,25 +299,31 @@
                             <table class="table-auto text-xs md:text-sm profile-table w-[300%] md:w-full shadow">
                                 <thead>
                                     <tr>
-                                        <th>Hospital Name</th>
+                                        <th>DoctorName</th>
                                         <th>Location</th>
-                                        <th>HospitalID</th>
-                                        <th>Phone Number</th>
+                                        <th>Degree</th>
+                                        <th>Country</th>
+                                        <th>Department</th>
+                                        <th>DoctorIdNumber</th>
+                                        <th>DoctorPhoneNumber</th>
                                         <th>Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
+
                                     <tr>
                                         <td>
                                             <div class="flex items-center gap-2">
-                                                <img src="img/hospital/Ellipse 18.png" alt=""
-                                                    class="h-7 w-7 rounded-[50%]">
-                                                <p class="font-semibold"> Hospital 1</p>
+                                                <img src="img/Ellipse 2.png" alt="" class="h-7 w-7 rounded-[50%]">
+                                                <p class="font-semibold">Jacob Jones</p>
                                             </div>
                                         </td>
-                                        <td class="text-tColor2">Kazla ,Rajshahi </td>
+                                        <td class="text-tColor2">Mumbai, Cd road</td>
+                                        <td class="text-tColor2">FCPS</td>
+                                        <td class="text-tColor2">India</td>
+                                        <td class="text-tColor2">Psychology</td>
                                         <td class="text-tColor2">68908995</td>
-                                        <td class="text-tColor2">(229) 555-0109</td>
+                                        <td class="text-tColor2">(229)555-0109</td>
                                         <td class="text-tColor2">
                                             <div class="flex border  px-2 py-1">
                                                 <button class="border-right pr-2"><i
@@ -250,17 +333,20 @@
                                             </div>
                                         </td>
                                     </tr>
+
                                     <tr>
                                         <td>
                                             <div class="flex items-center gap-2">
-                                                <img src="img/hospital/Ellipse 19.png" alt=""
-                                                    class="h-7 w-7 rounded-[50%]">
-                                                <p class="font-semibold"> Hospital 2</p>
+                                                <img src="img/Ellipse 3.png" alt="" class="h-7 w-7 rounded-[50%]">
+                                                <p class="font-semibold">Arlene McCoy</p>
                                             </div>
                                         </td>
-                                        <td class="text-tColor2">Kazla ,Rajshahi </td>
+                                        <td class="text-tColor2">Mumbai, Cd road</td>
+                                        <td class="text-tColor2">MBBS</td>
+                                        <td class="text-tColor2">USA</td>
+                                        <td class="text-tColor2">Medicine</td>
                                         <td class="text-tColor2">68463643</td>
-                                        <td class="text-tColor2">(229) 555-0109</td>
+                                        <td class="text-tColor2">(505) 555-0125</td>
                                         <td class="text-tColor2">
                                             <div class="flex border  px-2 py-1">
                                                 <button class="border-right pr-2"><i
@@ -270,17 +356,20 @@
                                             </div>
                                         </td>
                                     </tr>
+
                                     <tr>
                                         <td>
                                             <div class="flex items-center gap-2">
-                                                <img src="img/hospital/Ellipse 20.png" alt=""
-                                                    class="h-7 w-7 rounded-[50%]">
-                                                <p class="font-semibold"> Hospital 3</p>
+                                                <img src="img/Ellipse 4.png" alt="" class="h-7 w-7 rounded-[50%]">
+                                                <p class="font-semibold">Jenny Wilson</p>
                                             </div>
                                         </td>
-                                        <td class="text-tColor2">Kazla ,Rajshahi </td>
+                                        <td class="text-tColor2">Mumbai, Cd road</td>
+                                        <td class="text-tColor2">FRCS</td>
+                                        <td class="text-tColor2">India</td>
+                                        <td class="text-tColor2">Medicine</td>
                                         <td class="text-tColor2">76879024</td>
-                                        <td class="text-tColor2">(229) 555-0109</td>
+                                        <td class="text-tColor2">(316) 555-0116</td>
                                         <td class="text-tColor2">
                                             <div class="flex border  px-2 py-1">
                                                 <button class="border-right pr-2"><i
@@ -290,17 +379,20 @@
                                             </div>
                                         </td>
                                     </tr>
+
                                     <tr>
                                         <td>
                                             <div class="flex items-center gap-2">
-                                                <img src="img/hospital/Ellipse 21.png" alt=""
-                                                    class="h-7 w-7 rounded-[50%]">
-                                                <p class="font-semibold"> Hospital 4</p>
+                                                <img src="img/Ellipse 5.png" alt="" class="h-7 w-7 rounded-[50%]">
+                                                <p class="font-semibold">Marvin McKinney</p>
                                             </div>
                                         </td>
-                                        <td class="text-tColor2">Kazla ,Rajshahi </td>
+                                        <td class="text-tColor2">Mumbai, Cd road</td>
+                                        <td class="text-tColor2">MBBS</td>
+                                        <td class="text-tColor2">USA</td>
+                                        <td class="text-tColor2">Gynocology</td>
                                         <td class="text-tColor2">65757858</td>
-                                        <td class="text-tColor2">(229) 555-0109</td>
+                                        <td class="text-tColor2">(303) 555-0105</td>
                                         <td class="text-tColor2">
                                             <div class="flex border  px-2 py-1">
                                                 <button class="border-right pr-2"><i
@@ -310,17 +402,20 @@
                                             </div>
                                         </td>
                                     </tr>
+
                                     <tr>
                                         <td>
                                             <div class="flex items-center gap-2">
-                                                <img src="img/hospital/Ellipse 22.png" alt=""
-                                                    class="h-7 w-7 rounded-[50%]">
-                                                <p class="font-semibold"> Hospital 5</p>
+                                                <img src="img/Ellipse 6.png" alt="" class="h-7 w-7 rounded-[50%]">
+                                                <p class="font-semibold">Wade Warren</p>
                                             </div>
                                         </td>
-                                        <td class="text-tColor2">Kazla ,Rajshahi </td>
+                                        <td class="text-tColor2">Mumbai, Cd road</td>
+                                        <td class="text-tColor2">FRCS</td>
+                                        <td class="text-tColor2">UK</td>
+                                        <td class="text-tColor2">Gastrology</td>
                                         <td class="text-tColor2">974577865</td>
-                                        <td class="text-tColor2">(229) 555-0109</td>
+                                        <td class="text-tColor2">(270) 555-0117</td>
                                         <td class="text-tColor2">
                                             <div class="flex border  px-2 py-1">
                                                 <button class="border-right pr-2"><i
@@ -330,17 +425,20 @@
                                             </div>
                                         </td>
                                     </tr>
+
                                     <tr>
                                         <td>
                                             <div class="flex items-center gap-2">
-                                                <img src="img/hospital/Ellipse 23.png" alt=""
-                                                    class="h-7 w-7 rounded-[50%]">
-                                                <p class="font-semibold"> Hospital 6</p>
+                                                <img src="img/Ellipse 7.png" alt="" class="h-7 w-7 rounded-[50%]">
+                                                <p class="font-semibold">Annette Black</p>
                                             </div>
                                         </td>
-                                        <td class="text-tColor2">Kazla ,Rajshahi </td>
+                                        <td class="text-tColor2">Mumbai, Cd road</td>
+                                        <td class="text-tColor2">FCPS</td>
+                                        <td class="text-tColor2">UK</td>
+                                        <td class="text-tColor2">Medicine</td>
                                         <td class="text-tColor2">895747890</td>
-                                        <td class="text-tColor2">(229) 555-0109</td>
+                                        <td class="text-tColor2">(209) 555-0104</td>
                                         <td class="text-tColor2">
                                             <div class="flex border  px-2 py-1">
                                                 <button class="border-right pr-2"><i
@@ -350,17 +448,20 @@
                                             </div>
                                         </td>
                                     </tr>
+
                                     <tr>
                                         <td>
                                             <div class="flex items-center gap-2">
-                                                <img src="img/hospital/Ellipse 24.png" alt=""
-                                                    class="h-7 w-7 rounded-[50%]">
-                                                <p class="font-semibold"> Hospital 7</p>
+                                                <img src="img/Ellipse 8.png" alt="" class="h-7 w-7 rounded-[50%]">
+                                                <p class="font-semibold">Esther Howard</p>
                                             </div>
                                         </td>
-                                        <td class="text-tColor2">Kazla ,Rajshahi </td>
+                                        <td class="text-tColor2">Mumbai, Cd road</td>
+                                        <td class="text-tColor2">FCPS</td>
+                                        <td class="text-tColor2">India</td>
+                                        <td class="text-tColor2">Medicine</td>
                                         <td class="text-tColor2">868674793</td>
-                                        <td class="text-tColor2">(229) 555-0109</td>
+                                        <td class="text-tColor2">(217) 555-0113</td>
                                         <td class="text-tColor2">
                                             <div class="flex border  px-2 py-1">
                                                 <button class="border-right pr-2"><i
@@ -370,18 +471,49 @@
                                             </div>
                                         </td>
                                     </tr>
+
+                                    <tr>
+                                        <td>
+                                            <div class="flex items-center gap-2">
+                                                <img src="img/Ellipse 9.png" alt="" class="h-7 w-7 rounded-[50%]">
+                                                <p class="font-semibold">Robert Fox</p>
+                                            </div>
+                                        </td>
+                                        <td class="text-tColor2">Mumbai, Cd road</td>
+                                        <td class="text-tColor2">MBBS</td>
+                                        <td class="text-tColor2">India</td>
+                                        <td class="text-tColor2">Medicine</td>
+                                        <td class="text-tColor2">464575896</td>
+                                        <td class="text-tColor2">(405) 555-0128</td>
+                                        <td class="text-tColor2">
+                                            <div class="flex border  px-2 py-1">
+                                                <button class="border-right pr-2"><i
+                                                        class="fa-solid fa-pencil"></i></button>
+                                                <button class="pl-2 text-red-500"><i
+                                                        class="fa-regular fa-trash-can"></i></button>
+                                            </div>
+                                        </td>
+                                    </tr>
+
                                 </tbody>
                             </table>
 
                         </div>
 
                     </div>
+
+
                 </section>
 
             </div>
+
+
+
         </div>
 
     </section>
+
+
 
 
 
@@ -425,6 +557,19 @@
             collapse.classList.add('hidden');
         });
 
+        // Modal window
+
+        // const openModalButton = document.getElementById('openModalButton');
+        // const closeModalButton = document.getElementById('closeModalButton');
+        // const modal = document.getElementById('myModal');
+
+        // openModalButton.addEventListener('click', () => {
+        //     modal.style.display = 'block';
+        // });
+
+        // closeModalButton.addEventListener('click', () => {
+        //     modal.style.display = 'none';
+        // });
 
     </script>
 </body>
