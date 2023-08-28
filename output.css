@@ -1814,19 +1814,35 @@ h6 {
 }
 
 
-@media (max-width: 768px){
+@media (max-width: 640px){
  .doctor-card{
-  width: 80%
+  width: 90%
  }
 }
-/* @media (min-width: 768px) and  (max-width:1020px){
+@media (min-width: 641px) and  (max-width:1024px){
  .doctor-card{
-  width: 50%
+  width: 90%
  }
-} */
+}
+@media (min-width: 768px) and  (max-width:1020px){
+ .doctor-card{
+  width: 100%
+ }
+}
+@media (min-width: 1021px) and  (max-width:1280px){
+ .doctor-card{
+  width: 100%
+ }
+}
 
 
 @media (min-width: 768px) {
+
+  /* .doctor-card{
+    width: 337px;
+    height:115px
+   } */
+  
 
   .md\:block {
     display: block;
