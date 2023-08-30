@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marketing Officer List</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" /> -->
+</head>
+
+<body class="font-sans">
+    <section class=" max-w-[1920px] ml-auto mr-auto">
+
+        <!-- Navigation Menu -->
+        <div class="relative dashboard-menu">
+            <nav
+                class="bg-white fixed top-0 flex flex-row xl:flex-col justify-between xl:h-full custom-container shadow-sm xl:shadow-none w-full xl:w-fit z-10">
+
+                <div class="">
+
+                    <a href=""><img class="h-10 xl:h-14 2xl:h-14 mx-0 xl:mx-5 my-2 xl:my-5 xl:ml-5"
+                            src="img/logo (2).png" alt=""></a>
+
+                    <div class="bg-white xl:bg-transparent hidden xl:grid absolute xl:static top-6 right-0 z-10 rounded-sm py-5 xl:py-0 2xl:py-5 max-h-[800px] xl:max-h-[470px] 2xl:max-h-[750px] overflow-y-auto scroll-h min-w-[195px] scroll-smooth shadow-md xl:shadow-none mt-5 px-5"
+                        id="toggle-menu">
+
+                        <a class="menu-list " href="./Agent_dashboard.html">
+                            <div class="h-4 w-4 flex items-center justify-center rounded-[50%] overflow-hidden"><img
+                                    src="img/Traced Image 1.png" alt=""></div>
+                            <span>Overview</span>
+                        </a>
+
+                        <a class="menu-list mt-2 menu-list-active" href="./Marketing_officer_list.html">
+                            <div class="h-4 w-4 flex items-center justify-center rounded-[50%] overflow-hidden"><img
+                                    src="img/Agent/Vector (2).png" alt=""></div>
+                            <span>Agent</span>
+                        </a>
+
+                    </div>
+                </div>
+
+                <!-- HamBurger Section -->
+                <div class="flex justify-center items-center gap-3 pt-3">
+                    <button class="block xl:hidden" id="toggle-button">
+                        <svg class="-mr-[1px]" height="24px" width="24px" fill="none" stroke="currentColor"
+                            stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                            aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5">
+                            </path>
+                        </svg>
+                    </button>
+                </div>
+            </nav>
+        </div>
+
+
+        <!-- Right Side Section -->
+        <div class="ml-auto w-full xl:w-4/6 md:w-3/4 px-1 xl:px-5 py-2 mt-16 xl:mt-0 h-screen">
+
+
+            <!-- Project Overview Header -->
+
+            <section class="flex flex-col xl:flex-row xl:items-center justify-between px-5 py-2 xl:py-5 gap-4">
+
+                <div class="relative">
+                    <input class="py-2 pr-3 pl-10 focus:outline-none" type="text" placeholder="Search">
+                    <i class="fa-solid fa-magnifying-glass absolute top-1/2 left-3 -translate-y-1/2 text-tColor"></i>
+                </div>
+
+                <!-- Notification & User -->
+
+                <div class="flex items-center gap-5 flex-wrap">
+
+                    <div
+                        class="text-md xl:text-base flex items-center gap-4 xl:gap-5 ml-auto fixed xl:static top-2 right-6 z-10 scale-75 xl:scale-100">
+
+
+                        <a class="p-3" href="#">
+                            <!-- <i class="fa-solid fa-bell fa-lg"></i> -->
+                            <div class="h-10 w-10 flex items-center justify-center rounded-[50%] overflow-hidden"><img
+                                    src="img/Notification.png" alt=""></div>
+                        </a>
+
+                        <a href="#" class="flex items-center gap-2">
+                            <div class="h-10 w-10 flex items-center justify-center rounded-[50%] overflow-hidden"><img
+                                    src="img/Img.png" alt=""></div>
+                            <p class="font-semibold text-md text-black">Maxbert</p>
+                            <i class="fa-solid fa-caret-down"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+            </section>
+            <div class="bg-gray pb-8">
+                <section class="px-5 py-5 flex justify-between items-center flex-wrap xl:flex-nowrap gap-5 ">
+
+                    <p class="font-bold text-3xl text-tColor2 min-w-[250px]">Marketing Officer List</p>
+
+                    <div class="flex items-end gap-4">
+                        <div class="bg-white relative rounded-md w-full xl:w-fit shadow">
+                            <input class="py-2 pr-3 pl-10 focus:outline-none" type="text" placeholder="Search Agent By ID..">
+                            <i
+                                class="fa-solid fa-magnifying-glass absolute top-1/2 left-3 -translate-y-1/2 text-tColor"></i>
+                        </div>
+                        <button class="btn bg-secondaryColor text-white font-semibold text-sm px-4 py-3 rounded mr-auto"
+                            onclick="my_modal_5.showModal()">Details
+                        </button>
+
+                        <!------------- Modal part-------------- -->
+                        <dialog id="my_modal_5" className="modal modal-bottom sm:modal-middle">
+                            <form class="modal-box w-90 ">
+                                <div class="flex gap-3 items-center justify-start pb-3">
+                                    <div class="h-4 w-4 flex  rounded-[50%] overflow-hidden">
+                                        <img src="img/Agent/Vector (2).png" alt="">
+                                    </div>
+                                    <span class="modal-text">Add Agent</span>
+                                </div>
+                                <button
+                                    class="btn-cross btn btn-sm btn-circle absolute right-2 top-2 bg-gray-200">✕</button>
+                                <div class="my-3">
+                                    <label class="block text-gray-700 text-sm mb-2" for="Agent Name">Agent
+                                        Name:</label>
+                                    <input
+                                        class="rounded-md  shadow py-2 px-3 w-full focus:outline-none bg-gray-100 text-sm"
+                                        type="text" placeholder="Agent Name">
+                                </div>
+                                <div class="my-3">
+                                    <label class="block text-gray-700 text-sm mb-2" for="Agent Name">Agent Location:</label>
+                                    <input
+                                        class="rounded-md  shadow py-2 px-3 w-full focus:outline-none bg-gray-100 text-sm"
+                                        id="Agent Degree" type="text" placeholder="Write Agent Location">
+                                </div>
+                                <div class="my-3">
+                                    <label class="block text-gray-700 text-sm mb-2" for="Agent Name">Agent
+                                        ID/Roll :</label>
+                                    <div class="relative">
+                                        <select
+                                            class="block appearance-none w-full text-tColor py-3 px-4 pr-8 rounded leading-tight focus:outline-none shadow font-sm bg-gray-100">
+                                            <option class="text-black">Select ID</option>
+                                            <option class="text-black">203</option>
+                                            <option class="text-black">204</option>
+                                            <option class="text-black">405</option>
+                                            <option class="text-black">585</option>
+                                        </select>
+                                        <div
+                                            class="pointer-events-none absolute inset-y-0 right-1 flex items-center px-2 text-white -mt-2">
+                                            <i class="fa-solid fa-sort-down text-tColor"></i>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="my-3">
+                                    <label class="block text-gray-700 text-sm mb-2" for="Agent Name">Agent
+                                        Password:</label>
+                                    <div class="relative">
+                                        <select
+                                            class="block appearance-none w-full text-tColor py-3 px-4 pr-8 rounded leading-tight focus:outline-none shadow font-sm bg-gray-100">
+                                            <option class="text-black">Write Password</option>
+                                            <option class="text-black">4235</option>
+                                            <option class="text-black">34838</option>
+                                            <option class="text-black">535446</option>
+                                            <option class="text-black">3525</option>
+                                        </select>
+                                        <div
+                                            class="pointer-events-none absolute inset-y-0 right-1 flex items-center px-2 text-white -mt-2">
+                                            <i class="fa-solid fa-sort-down text-tColor"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="my-3">
+                                    <label class="block text-gray-700 text-sm mb-2" for="Agent Name">Agent
+                                        Designation:</label>
+                                    <div class="relative">
+                                        <select
+                                            class="block appearance-none w-full text-tColor py-3 px-4 pr-8 rounded leading-tight focus:outline-none shadow font-sm bg-gray-100">
+                                            <option class="text-black">Choose Designation </option>
+                                            <option class="text-black">Marketing officer</option>
+                                            <option class="text-black">Marketing officer</option>
+                                            <option class="text-black">Marketing officer</option>
+                                            <option class="text-black">Marketing officer</option>
+                                        </select>
+                                        <div
+                                            class="pointer-events-none absolute inset-y-0 right-1 flex items-center px-2 text-white -mt-2">
+                                            <i class="fa-solid fa-sort-down text-tColor"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                               
+                                <div class="my-3">
+                                    <label class="block text-gray-700 text-sm mb-2" for="Agent Name">Agent
+                                        Phone Number:</label>
+                                    <input
+                                        class="rounded-md  shadow py-2 px-3 w-full focus:outline-none bg-gray-100 text-sm"
+                                        id="Phone Number" type="text" placeholder="Agent Phone Number">
+                                </div>
+                               
+                                <div class="upload">
+                                    <button type="button" class="btn-file shadow bg-gray-100 text-xs py-3 mb-2 w-full font-bold"> <i
+                                            class="fa-solid fa-upload"></i> Upload your Photo <input type="file"></button>
+                                </div>
+                                <button
+                                    class="btn bg-secondaryColor text-white font-semibold text-sm px-4 py-3 rounded mr-auto w-full my-5"
+                                    type="submit">Add Agent</button>
+                            </form>
+                        </dialog>
+
+                    </div>
+                </section>
+
+                <section class="mx-5">
+                    <div class="flex flex-col justify-around">
+
+                        <div class="bg-white overflow-x-scroll md:overflow-hidden">
+                            <table class="table-auto text-xs md:text-sm profile-table w-[300%] md:w-full shadow">
+                                <thead>
+                                    <tr>
+                                        <th>AgentName</th>
+                                        <th>Location</th>
+                                        <th>T.User Registered</th>
+                                        <th>ID Number</th>
+                                        <th>PhoneNumber</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+                                    <tr>
+                                        <td>
+                                            <div class="flex items-center gap-2">
+                                                <img src="img/Ellipse 2.png" alt="" class="h-7 w-7 rounded-[50%]">
+                                                <p class="font-semibold">Jacob Jones</p>
+                                            </div>
+                                        </td>
+                                        <td class="text-tColor2">Kazla, Rajshahi</td>
+                                        <td class="text-tColor2">740</td>
+                                        <td class="text-tColor2">68908995</td>
+                                        <td class="text-tColor2">(229)555-0109</td>
+                                        <td class="text-tColor2">
+                                            <div class="flex border  px-2 py-1">
+                                                <button class="border-right pr-2"><i
+                                                        class="fa-solid fa-pencil"></i></button>
+                                                <button class="pl-2 text-red-500"><i
+                                                        class="fa-regular fa-trash-can"></i></button>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            <div class="flex items-center gap-2">
+                                                <img src="img/Ellipse 3.png" alt="" class="h-7 w-7 rounded-[50%]">
+                                                <p class="font-semibold">Arlene McCoy</p>
+                                            </div>
+                                        </td>
+                                        <td class="text-tColor2">Kazla, Rajshahi</td>
+                                        <td class="text-tColor2">922</td>
+                                        <td class="text-tColor2">68463643</td>
+                                        <td class="text-tColor2">(505) 555-0125</td>
+                                        <td class="text-tColor2">
+                                            <div class="flex border  px-2 py-1">
+                                                <button class="border-right pr-2"><i
+                                                        class="fa-solid fa-pencil"></i></button>
+                                                <button class="pl-2 text-red-500"><i
+                                                        class="fa-regular fa-trash-can"></i></button>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            <div class="flex items-center gap-2">
+                                                <img src="img/Ellipse 4.png" alt="" class="h-7 w-7 rounded-[50%]">
+                                                <p class="font-semibold">Jenny Wilson</p>
+                                            </div>
+                                        </td>
+                                        <td class="text-tColor2">Kazla, Rajshahi</td>
+                                        <td class="text-tColor2">177</td>
+                                        <td class="text-tColor2">76879024</td>
+                                        <td class="text-tColor2">(316) 555-0116</td>
+                                        <td class="text-tColor2">
+                                            <div class="flex border  px-2 py-1">
+                                                <button class="border-right pr-2"><i
+                                                        class="fa-solid fa-pencil"></i></button>
+                                                <button class="pl-2 text-red-500"><i
+                                                        class="fa-regular fa-trash-can"></i></button>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            <div class="flex items-center gap-2">
+                                                <img src="img/Ellipse 5.png" alt="" class="h-7 w-7 rounded-[50%]">
+                                                <p class="font-semibold">Marvin McKinney</p>
+                                            </div>
+                                        </td>
+                                        <td class="text-tColor2">Kazla, Rajshahi</td>
+                                        <td class="text-tColor2">816</td>
+                                        <td class="text-tColor2">65757858</td>
+                                        <td class="text-tColor2">(303) 555-0105</td>
+                                        <td class="text-tColor2">
+                                            <div class="flex border  px-2 py-1">
+                                                <button class="border-right pr-2"><i
+                                                        class="fa-solid fa-pencil"></i></button>
+                                                <button class="pl-2 text-red-500"><i
+                                                        class="fa-regular fa-trash-can"></i></button>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            <div class="flex items-center gap-2">
+                                                <img src="img/Ellipse 6.png" alt="" class="h-7 w-7 rounded-[50%]">
+                                                <p class="font-semibold">Wade Warren</p>
+                                            </div>
+                                        </td>
+                                        <td class="text-tColor2">Kazla, Rajshahi</td>
+                                        <td class="text-tColor2">556</td>
+                                        <td class="text-tColor2">974577865</td>
+                                        <td class="text-tColor2">(270) 555-0117</td>
+                                        <td class="text-tColor2">
+                                            <div class="flex border  px-2 py-1">
+                                                <button class="border-right pr-2"><i
+                                                        class="fa-solid fa-pencil"></i></button>
+                                                <button class="pl-2 text-red-500"><i
+                                                        class="fa-regular fa-trash-can"></i></button>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            <div class="flex items-center gap-2">
+                                                <img src="img/Ellipse 7.png" alt="" class="h-7 w-7 rounded-[50%]">
+                                                <p class="font-semibold">Annette Black</p>
+                                            </div>
+                                        </td>
+                                        <td class="text-tColor2">Kazla, Rajshahi</td>
+                                        <td class="text-tColor2">994</td>
+                                        <td class="text-tColor2">895747890</td>
+                                        <td class="text-tColor2">(209) 555-0104</td>
+                                        <td class="text-tColor2">
+                                            <div class="flex border  px-2 py-1">
+                                                <button class="border-right pr-2"><i
+                                                        class="fa-solid fa-pencil"></i></button>
+                                                <button class="pl-2 text-red-500"><i
+                                                        class="fa-regular fa-trash-can"></i></button>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            <div class="flex items-center gap-2">
+                                                <img src="img/Ellipse 8.png" alt="" class="h-7 w-7 rounded-[50%]">
+                                                <p class="font-semibold">Esther Howard</p>
+                                            </div>
+                                        </td>
+                                        <td class="text-tColor2">Kazla, Rajshahi</td>
+                                        <td class="text-tColor2">798</td>
+                                        <td class="text-tColor2">868674793</td>
+                                        <td class="text-tColor2">(217) 555-0113</td>
+                                        <td class="text-tColor2">
+                                            <div class="flex border  px-2 py-1">
+                                                <button class="border-right pr-2"><i
+                                                        class="fa-solid fa-pencil"></i></button>
+                                                <button class="pl-2 text-red-500"><i
+                                                        class="fa-regular fa-trash-can"></i></button>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            <div class="flex items-center gap-2">
+                                                <img src="img/Ellipse 9.png" alt="" class="h-7 w-7 rounded-[50%]">
+                                                <p class="font-semibold">Robert Fox</p>
+                                            </div>
+                                        </td>
+                                        <td class="text-tColor2">Kazla, Rajshahi</td>
+                                        <td class="text-tColor2">423</td>
+                                        <td class="text-tColor2">464575896</td>
+                                        <td class="text-tColor2">(405) 555-0128</td>
+                                        <td class="text-tColor2">
+                                            <div class="flex border  px-2 py-1">
+                                                <button class="border-right pr-2"><i
+                                                        class="fa-solid fa-pencil"></i></button>
+                                                <button class="pl-2 text-red-500"><i
+                                                        class="fa-regular fa-trash-can"></i></button>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+
+                        </div>
+
+                    </div>
+                </section>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Header Section Script -->
+    <script>
+        // Menu toggle button 
+        const toggleButton = document.getElementById("toggle-button");
+        const toggleMenu = document.getElementById("toggle-menu");
+        var toggleCounter = 1;
+        toggleButton.onclick = function () {
+            toggleCounter++;
+            if (toggleCounter % 2 == 0) {
+                toggleMenu.classList.remove("hidden");
+                toggleMenu.classList.add("grid");
+            }
+            else {
+                toggleMenu.classList.remove("grid");
+                toggleMenu.classList.add("hidden");
+            }
+        }
+
+
+    </script>
+
+</body>
+
+</html>

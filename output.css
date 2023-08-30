@@ -553,6 +553,20 @@ h6 {
   font-weight: 500;
 }
 
+.btn-file {
+  position: relative;
+  overflow: hidden;
+  border-radius: 3px;
+}
+.btn-file input[type="file"] {
+  cursor: pointer;
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  transform: scale(3);
+  opacity: 0;
+}
+
 .primary-btn {
   border-radius: 0.25rem;
   background-color: #FA51150D;
