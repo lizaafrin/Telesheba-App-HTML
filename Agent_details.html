@@ -6,10 +6,62 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agent Details</title>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="output.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" /> -->
+
+    <!-- <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+        google.charts.load("current", { packages: ['corechart'] });
+        google.charts.setOnLoadCallback(drawChart);
+        function drawChart() {
+            var data = google.visualization.arrayToDataTable([
+                ["Element", "Density", { role: "style" }],
+                ["Jan", 8.94, "#b87333"],
+                ["Feb", 10.49, "silver"],
+                ["Mar", 19.30, "gold"],
+                ["Apr", 21.45, "color: #e5e4e2"],
+                ["May", 20.45, "color: #e5e4e2"],
+                ["June", 21.45, "color: #e5e4e2"],
+                ["Jul", 21.45, "color: #e5e4e2"],
+                ["Aug", 21.45, "color: #e5e4e2"],
+                ["Sep", 21.45, "color: #e5e4e2"],
+                ["Oct", 21.45, "color: #e5e4e2"],
+                ["Nov", 21.45, "color: #e5e4e2"],
+                ["Dec", 21.45, "color: #e5e4e2"],
+                ["Jan", 8.94, "#b87333"],
+                ["Jul", 21.45, "color: #e5e4e2"],
+                ["Aug", 21.45, "color: #e5e4e2"],
+                ["Sep", 21.45, "color: #e5e4e2"],
+                ["Oct", 21.45, "color: #e5e4e2"],
+                ["Nov", 21.45, "color: #e5e4e2"],
+              
+
+            ]);
+
+            var view = new google.visualization.DataView(data);
+            view.setColumns([0, 1,
+                {
+                    calc: "stringify",
+                    sourceColumn: 1,
+                    type: "string",
+                    role: "annotation"
+                },
+                2]);
+
+            var options = {
+                // title: "Density of Precious Metals, in g/cm^3",
+                width: 1200,
+                height: 400,
+                bar: { groupWidth: "30%" },
+                legend: { position: "none" },
+            };
+            var chart = new google.visualization.ColumnChart(document.getElementById("columnchart_values"));
+            chart.draw(view, options);
+        }
+    </script> -->
 </head>
 
 <body class="font-sans">
@@ -97,15 +149,158 @@
                 </div>
 
             </section>
-            <div class="bg-gray pb-8">
 
-                <!-- <div class="mx-auto w-3/5 overflow-hidden">
-                    <canvas data-te-chart="bar" data-te-dataset-label="Traffic"
-                        data-te-labels="['Monday', 'Tuesday' , 'Wednesday' , 'Thursday' , 'Friday' , 'Saturday' , 'Sunday ']"
-                        data-te-dataset-data="[2112, 2343, 2545, 3423, 2365, 1985, 987]">
-                    </canvas>
-                </div> -->
-                <section class="px-5 py-5 flex justify-between items-center flex-wrap xl:flex-nowrap gap-5 ">
+            <div class="bg-gray pb-8">
+                <div class="px-5 py-5">
+                    <p class="font-bold text-2xl md:text-3xl text-tColor2 min-w-[250px]">Agent Details</p>
+                    <div class="flex flex-col items-center justify-center md:flex-row gap-4">
+                        <img class="" src="img/Agent/Rectangle 19.png" alt="">
+                        <div class="w-full">
+                            <h4 class="text-lg py-5">Abdullah khan</h4>
+                            <div class="flex gap-8 pb-4">
+                                <div class="flex gap-4">
+                                    <div>
+                                        <img class="bg-green rounded-full p-3"
+                                            src="img/Agent/vuesax/linear/wallet-add.png" alt="">
+                                    </div>
+                                    <div>
+                                        <span class="text-sm text-gray">Total User Registeres</span>
+                                        <p>1245</p>
+                                    </div>
+                                </div>
+                                <div class="flex gap-4">
+                                    <div>
+                                        <img class="bg-blue rounded-full p-3" src="img/Agent/vuesax/linear/call.png"
+                                            alt="">
+                                    </div>
+                                    <div>
+                                        <span class="text-sm text-gray">Phone Number</span>
+                                        <p>01799040321</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex gap-10">
+                                <div class="flex gap-4">
+                                    <div>
+                                        <img class="bg-red rounded-full p-3" src="img/Agent/vuesax/linear/menu.png"
+                                            alt="">
+                                    </div>
+                                    <div>
+                                        <span class="text-sm text-gray">ID number</span>
+                                        <p>#805464556905</p>
+                                    </div>
+                                </div>
+                                <div class="flex gap-4">
+                                    <div>
+                                        <img class="bg-yellow w-[18px] h-[18px] rounded-full p-3"
+                                            src="img/Agent/vuesax/linear/password-check-1.png" alt="">
+                                    </div>
+                                    <div>
+                                        <span class="text-sm text-gray">Password</span>
+                                        <p>Wtrryhws3534</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!---------------- chart ---------------->
+                <section class="mx-10 px-5 my-5">
+                    <div class="chart">
+                        <div class="flex gap-4 items-center">
+                            <p class="text-2xl font-bold">Total Registration</p>
+                            <img class="w-5 h-5" src="img/Agent/vuesax/linear/info-circle.png" alt="">
+                        </div>
+                        <h3 class="font-semibold">1246</h3>
+                        <div class="flex gap-4">
+                            <button><img src="img/Agent/Button.png" alt=""></button>
+                            <p>VS This Month</p>
+                        </div>
+                        <canvas id="myChart"></canvas>
+
+                    </div>
+                </section>
+                <!---------------- Target---------------- -->
+                <section class="mx-10 px-5 my-5">
+                    <p class="font-bold text-2xl text-tColor2 min-w-[250px] ">Target Today</p>
+                    <div class="w-[70%] xl:w-2/3 h-44 shadow rounded px-5 my-5 bg-white flex flex-col gap-4 justify-center">
+
+                        <!-- <progress class="progress w-90" value="50" max="100"></progress> -->
+                        <p>Target Today 5/10</p>
+                        <!-- <div class="skill">
+                            <span class="bar"><span class="html"></span></span>
+                        </div> -->
+                        <div class="skill">
+                            <div class="skill-bar">
+                                <div class="skill-per" per="90%" style="max-width: 90%"></div>
+                            </div>
+                        </div>
+                        <button class="btn bg-secondaryColor text-white font-semibold text-sm px-4 py-3 rounded mr-auto"
+                            onclick="my_modal_5.showModal()">Set Target
+                        </button>
+
+
+                        <!------------- Modal part-------------- -->
+                        <dialog id="my_modal_5" className="modal modal-bottom sm:modal-middle">
+                            <form class="modal-box w-90 ">
+                                <button
+                                    class="btn-cross btn btn-sm btn-circle absolute right-2 top-2 bg-gray-200">✕</button>
+
+
+
+                                <div class="my-3">
+                                    <label class="block text-gray-700 text-sm mb-2 font-semibold"
+                                        for="Hospital Name">Select Due
+                                        Date</label>
+
+                                </div>
+
+                                <div class="wrapper bg-gray-100">
+                                    <header>
+                                        <div class="flex">
+                                            <span id="prev"
+                                                class="material-symbols-rounded items-center">chevron_left</span>
+                                            <p class="current-date"></p>
+                                            <span id="next" class="material-symbols-rounded">chevron_right</span>
+                                        </div>
+                                    </header>
+
+                                    <div class="calendar ">
+                                        <ul class="weeks">
+                                            <li>Sun</li>
+                                            <li>Mon</li>
+                                            <li>Tue</li>
+                                            <li>Wed</li>
+                                            <li>Thu</li>
+                                            <li>Fri</li>
+                                            <li>Sat</li>
+                                        </ul>
+                                        <ul class="days"></ul>
+                                    </div>
+                                </div>
+
+                                <div class="my-3">
+                                    <label class="block text-gray-700 text-sm mb-2 font-semibold"
+                                        for="Hospital Name">Set Target</label>
+                                    <input
+                                        class="rounded-md  shadow py-2 px-3 w-full focus:outline-none bg-gray-100 text-sm"
+                                        type="text" placeholder="">
+                                </div>
+
+                                <button
+                                    class="btn bg-secondaryColor text-white font-semibold text-sm px-4 py-3 rounded mr-auto w-full my-5"
+                                    type="submit">Done</button>
+                            </form>
+                        </dialog>
+
+                    </div>
+
+
+                </section>
+
+
+                <section class="px-3 py-5 flex justify-between items-center flex-wrap xl:flex-nowrap gap-5 ">
 
                     <p class="font-bold text-2xl text-tColor2 min-w-[250px]">Agent Subordintes</p>
 
@@ -120,109 +315,10 @@
                         </button>
 
 
-                        ----------- Modal part--------------
-
-
-                        <dialog id="my_modal_5" className="modal modal-bottom sm:modal-middle">
-                            <form class="modal-box w-90 ">
-                                <div class="flex gap-3 items-center justify-start pb-3">
-                                    <div class="h-4 w-4 flex  rounded-[50%] overflow-hidden">
-                                        <img src="img/Agent/Vector (2).png" alt="">
-                                    </div>
-                                    <span class="modal-text">Add Agent</span>
-                                </div>
-                                <button
-                                    class="btn-cross btn btn-sm btn-circle absolute right-2 top-2 bg-gray-200">✕</button>
-                                <div class="my-3">
-                                    <label class="block text-gray-700 text-sm mb-2" for="Agent Name">Agent
-                                        Name:</label>
-                                    <input
-                                        class="rounded-md  shadow py-2 px-3 w-full focus:outline-none bg-gray-100 text-sm"
-                                        type="text" placeholder="Agent Name">
-                                </div>
-                                <div class="my-3">
-                                    <label class="block text-gray-700 text-sm mb-2" for="Agent Name">Agent Location:</label>
-                                    <input
-                                        class="rounded-md  shadow py-2 px-3 w-full focus:outline-none bg-gray-100 text-sm"
-                                        id="Agent Degree" type="text" placeholder="Write Agent Location">
-                                </div>
-                                <div class="my-3">
-                                    <label class="block text-gray-700 text-sm mb-2" for="Agent Name">Agent
-                                        ID/Roll :</label>
-                                    <div class="relative">
-                                        <select
-                                            class="block appearance-none w-full text-tColor py-3 px-4 pr-8 rounded leading-tight focus:outline-none shadow font-sm bg-gray-100">
-                                            <option class="text-black">Select ID</option>
-                                            <option class="text-black">203</option>
-                                            <option class="text-black">204</option>
-                                            <option class="text-black">405</option>
-                                            <option class="text-black">585</option>
-                                        </select>
-                                        <div
-                                            class="pointer-events-none absolute inset-y-0 right-1 flex items-center px-2 text-white -mt-2">
-                                            <i class="fa-solid fa-sort-down text-tColor"></i>
-                                        </div>
-                                    </div>
-
-                                </div>
-                                <div class="my-3">
-                                    <label class="block text-gray-700 text-sm mb-2" for="Agent Name">Agent
-                                        Password:</label>
-                                    <div class="relative">
-                                        <select
-                                            class="block appearance-none w-full text-tColor py-3 px-4 pr-8 rounded leading-tight focus:outline-none shadow font-sm bg-gray-100">
-                                            <option class="text-black">Write Password</option>
-                                            <option class="text-black">4235</option>
-                                            <option class="text-black">34838</option>
-                                            <option class="text-black">535446</option>
-                                            <option class="text-black">3525</option>
-                                        </select>
-                                        <div
-                                            class="pointer-events-none absolute inset-y-0 right-1 flex items-center px-2 text-white -mt-2">
-                                            <i class="fa-solid fa-sort-down text-tColor"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="my-3">
-                                    <label class="block text-gray-700 text-sm mb-2" for="Agent Name">Agent
-                                        Designation:</label>
-                                    <div class="relative">
-                                        <select
-                                            class="block appearance-none w-full text-tColor py-3 px-4 pr-8 rounded leading-tight focus:outline-none shadow font-sm bg-gray-100">
-                                            <option class="text-black">Choose Designation </option>
-                                            <option class="text-black">Marketing officer</option>
-                                            <option class="text-black">Marketing officer</option>
-                                            <option class="text-black">Marketing officer</option>
-                                            <option class="text-black">Marketing officer</option>
-                                        </select>
-                                        <div
-                                            class="pointer-events-none absolute inset-y-0 right-1 flex items-center px-2 text-white -mt-2">
-                                            <i class="fa-solid fa-sort-down text-tColor"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                               
-                                <div class="my-3">
-                                    <label class="block text-gray-700 text-sm mb-2" for="Agent Name">Agent
-                                        Phone Number:</label>
-                                    <input
-                                        class="rounded-md  shadow py-2 px-3 w-full focus:outline-none bg-gray-100 text-sm"
-                                        id="Phone Number" type="text" placeholder="Agent Phone Number">
-                                </div>
-                               
-                                <div class="upload">
-                                    <button type="button" class="btn-file bg-gray-100 text-xs py-3 mb-2 w-full font-bold"> <i
-                                            class="fa-solid fa-upload"></i> Upload your Photo <input type="file"></button>
-                                </div>
-                                <button
-                                    class="btn bg-secondaryColor text-white font-semibold text-sm px-4 py-3 rounded mr-auto w-full my-5"
-                                    type="submit">Add Agent</button>
-                            </form>
-                        </dialog>
-
+                       
                     </div> -->
                 </section>
-
+                <!-- -------------------------Table-------------- -->
                 <section class="mx-5">
                     <div class="flex flex-col justify-around">
 
@@ -443,8 +539,70 @@
 
 
     </script>
-<!-- 
-    <script type="text/javascript" src="../node_modules/tw-elements/dist/js/tw-elements.umd.min.js"></script> -->
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    <script src="chart.js"></script>
+
+
+    <!-- -------------------Calender Script Js----------------- -->
+    <script>
+        const daysTag = document.querySelector(".days"),
+            currentDate = document.querySelector(".current-date"),
+            prevNextIcon = document.querySelectorAll("span");
+
+        // getting new date, current year and month
+        let date = new Date(),
+            currYear = date.getFullYear(),
+            currMonth = date.getMonth();
+
+        // storing full name of all months in array
+        const months = ["January", "February", "March", "April", "May", "June", "July",
+            "August", "September", "October", "November", "December"];
+
+        const renderCalendar = () => {
+            let firstDayofMonth = new Date(currYear, currMonth, 1).getDay(), // getting first day of month
+                lastDateofMonth = new Date(currYear, currMonth + 1, 0).getDate(), // getting last date of month
+                lastDayofMonth = new Date(currYear, currMonth, lastDateofMonth).getDay(), // getting last day of month
+                lastDateofLastMonth = new Date(currYear, currMonth, 0).getDate(); // getting last date of previous month
+            let liTag = "";
+
+            for (let i = firstDayofMonth; i > 0; i--) { // creating li of previous month last days
+                liTag += `<li class="inactive">${lastDateofLastMonth - i + 1}</li>`;
+            }
+
+            for (let i = 1; i <= lastDateofMonth; i++) { // creating li of all days of current month
+                // adding active class to li if the current day, month, and year matched
+                let isToday = i === date.getDate() && currMonth === new Date().getMonth()
+                    && currYear === new Date().getFullYear() ? "active" : "";
+                liTag += `<li class="${isToday}">${i}</li>`;
+            }
+
+            for (let i = lastDayofMonth; i < 6; i++) { // creating li of next month first days
+                liTag += `<li class="inactive">${i - lastDayofMonth + 1}</li>`
+            }
+            currentDate.innerText = `${months[currMonth]} ${currYear}`; // passing current mon and yr as currentDate text
+            daysTag.innerHTML = liTag;
+        }
+        renderCalendar();
+
+        prevNextIcon.forEach(icon => { // getting prev and next icons
+            icon.addEventListener("click", () => { // adding click event on both icons
+                // if clicked icon is previous icon then decrement current month by 1 else increment it by 1
+                currMonth = icon.id === "prev" ? currMonth - 1 : currMonth + 1;
+
+                if (currMonth < 0 || currMonth > 11) { // if current month is less than 0 or greater than 11
+                    // creating a new date of current year & month and pass it as date value
+                    date = new Date(currYear, currMonth, new Date().getDate());
+                    currYear = date.getFullYear(); // updating current year with new date year
+                    currMonth = date.getMonth(); // updating current month with new date month
+                } else {
+                    date = new Date(); // pass the current date as date value
+                }
+                renderCalendar(); // calling renderCalendar function
+            });
+        });
+    </script>
+
 </body>
 
 </html>
